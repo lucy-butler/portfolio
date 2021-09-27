@@ -10,16 +10,16 @@ function Navigation() {
         <img src={profile} alt="ProfilePicture" />
       </div>
       <ul className="nav-items">
-        <li classNmae="nav-item">
+        <li className="nav-item">
           <NavLink to="/home" activeClassName="active-class">home</NavLink>
         </li>
-        <li classNmae="nav-item">
+        <li className="nav-item">
           <NavLink to="/about" activeClassName="active-class">about</NavLink>
         </li>
-        <li classNmae="nav-item">
+        <li className="nav-item">
           <NavLink to="/portfolio" activeClassName="active-class">portfolio</NavLink>
         </li>
-        <li classNmae="nav-item">
+        <li className="nav-item">
           <NavLink to="/contact" activeClassName="active-class">contact</NavLink>
         </li>
       </ul>

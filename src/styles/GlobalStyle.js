@@ -7,13 +7,14 @@ const GlobalStyle = createGlobalStyle`
   --border-color: #2E344E;
   --font-light--color: #a4acc4;
   --primary-color: #007bff;
+  --white-color: #ffffff;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 body {
@@ -29,8 +30,19 @@ a {
   text-decoration: none;
   font-family: inherit;
   color: inherit;
-  font-size: inherit;
+  font-size: 1.2rem;
 }
+
+h1 {
+  font-size: 4rem;
+  color: var(--white-color);
+  span {
+  font-size: 4rem;
+  color: var(--primary-color);
+  }
+}
+
+
 `;
 
 export default GlobalStyle;
