@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 :root {
   --background-dark-color: #10121A;
+  --background-darkgrey-color: #191D2B;
   --sidebar-dark-color: #191D2B;
   --border-color: #2E344E;
   --font-light--color: #a4acc4;
@@ -14,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 body {

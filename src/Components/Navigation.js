@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import profile from '../img/profile.jpg';
 
+
 function Navigation() {
   return (
     <NavigationStyle>
@@ -11,16 +12,16 @@ function Navigation() {
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <NavLink to="/home" activeClassName="active-class">home</NavLink>
+          <NavLink to="/" activeClassName="active-class" exact>home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/about" activeClassName="active-class">about</NavLink>
+          <NavLink to="/about" activeClassName="active-class" exact>about</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/portfolio" activeClassName="active-class">portfolio</NavLink>
+          <NavLink to="/portfolio" activeClassName="active-class" exact>portfolio</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/contact" activeClassName="active-class">contact</NavLink>
+          <NavLink to="/contact" activeClassName="active-class" exact>contact</NavLink>
         </li>
       </ul>
       <footer className="footer">
@@ -55,6 +56,7 @@ const NavigationStyle = styled.nav`
     text-align: center;
     .active-class {
       background-color: var(--primary-color);
+      color: white;
     }
     li{
       display: block;
@@ -62,7 +64,14 @@ const NavigationStyle = styled.nav`
       a {
         position:relative;
         display: block;
-        padding: .2rem 0;
+        padding: .3rem 0;
+        transition: all .5s;
+        font-weight: 600;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+      &:hover {
+        color: var(--white-color);
       }
       a::before {
         content: '';
@@ -72,8 +81,8 @@ const NavigationStyle = styled.nav`
         width: 0;
         height: 50%;
         background-color: var(--primary-color);
-        opacity: 0.15;
-        transition: all 0.2s;
+        opacity: 0.2;
+        transition: all 0.4s;
       }
       a:hover::before {
         width: 100%;
