@@ -79,7 +79,7 @@ const ExperiencePageStyle = styled.section`
         vertical-align: middle;
         svg {
           font-size: 2.5rem;
-          color: #20c997;
+          color: var(--icon-color);
         }
       }
     }
@@ -89,7 +89,7 @@ const ExperiencePageStyle = styled.section`
   }
   .exrerience-content {
     margin-top: 2rem;
-    border-left: 2px solid #20c997;
+    border-left: 2px solid var(--icon-color);
   }
 `;
 export default ExperiencePage;

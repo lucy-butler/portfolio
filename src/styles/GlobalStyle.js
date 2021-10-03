@@ -1,7 +1,22 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-:root {
+/* :root {
+
+} */
+.light-theme {
+  --background-dark-color: #eeeeee;
+  --background-darkgrey-color: #fff;
+  --sidebar-dark-color: #fff;
+  --border-color: #b1b1b1;
+  --font-light--color: #fff;
+  --primary-color: #20c997;
+  --white-color: #151515;
+  --under-color: #ffffff;
+  --subtitle-color: #dadada;
+  --icon-color: #0d5741;
+}
+.dark-theme {
   --background-dark-color: #10121A;
   --background-darkgrey-color: #191D2B;
   --sidebar-dark-color: #191D2B;
@@ -9,8 +24,10 @@ const GlobalStyle = createGlobalStyle`
   --font-light--color: #a4acc4;
   --primary-color: #007bff;
   --white-color: #ffffff;
+  --under-color: #ffffff;
+  --subtitle-color: #92949a;
+  --icon-color: #20c997;
 }
-
 * {
   margin: 0;
   padding: 0;

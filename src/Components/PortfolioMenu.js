@@ -28,12 +28,14 @@ const MenuItemStyle = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 2rem;
+  
   .grid-item {
     margin-bottom: 1.4rem;
 
     .portfolio-image {
       position: relative;
       cursor: pointer;
+      font-size: 0;
       img {
         width: 100%;
         height: 30vh;
@@ -93,6 +95,7 @@ const MenuItemStyle = styled.div`
       .text {
         font-weight: 200;
         font-size: 1rem;
+        color: var(--white-color);
       }
     }
   }

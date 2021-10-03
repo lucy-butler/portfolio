@@ -23,8 +23,9 @@ const TitleStyle = styled.div`
       left: 0;
       font-size: 5rem;
       font-weight: 600;
-      color: rgba(25, 29, 43, .44);
+      color: var(--subtitle-color);
       z-index: -1;
+      opacity: .5;
     }
   }
 `;

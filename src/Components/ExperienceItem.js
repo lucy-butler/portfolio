@@ -5,7 +5,7 @@ function ExperienceItem({year, title, text}) {
   return (
     <ExperienceItemStyle>
       <div className="left-content">
-        <p>{year}</p>
+        <p className="year">{year}</p>
       </div>
       <div className="right-content">
         <p className="title">{title}</p>
@@ -32,12 +32,14 @@ const ExperienceItemStyle = styled.div`
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      border: 2px solid #20c997;
+      border: 2px solid var(--icon-color);
       background-color: var(--background-dark-color);
+    }
+    .year {
+      color: var(--white-color);
     }
     p {
       display: inline-block;
-      
     }
   }
   .right-content {
@@ -54,13 +56,12 @@ const ExperienceItemStyle = styled.div`
       background-color: var(--border-color);
     }
     .title {
-      color: #20c997;
+      color: var(--icon-color);
       font-size: 1.6rem;
       padding-bottom: .6rem;
-      
     }
     .cont {
-
+      color: var(--white-color);
     }
   }
 `;

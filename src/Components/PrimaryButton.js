@@ -32,7 +32,7 @@ const PrimaryButtonStyle = styled.button`
   }
   &:hover::after {
     width: 100%;
-    background-color: var(--white-color);
+    background-color: var(--under-color);
   }
 `;
 

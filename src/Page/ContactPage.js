@@ -68,6 +68,12 @@ const ContactPageStyle = styled.section`
       grid-template-columns: repeat(4, 1fr);
       grid-column-gap: .2;
       margin-bottom: 5rem;
+      p {
+        color: var(--icon-color);
+      }
+      svg {
+        color: var(--icon-color);
+      }
     }
     .ContactForm {
       display: grid;
@@ -79,7 +85,7 @@ const ContactPageStyle = styled.section`
           margin: .4rem 0;
           font-size: 1.2rem;
           font-weight: 200;
-          color: inherit;
+          color: var(--white-color);
           letter-spacing: 1px;
         }
         input {
@@ -103,7 +109,7 @@ const ContactPageStyle = styled.section`
           margin: .4rem 0;
           font-size: 1.2rem;
           font-weight: 200;
-          color: inherit;
+          color: var(--white-color);
           letter-spacing: 1px;
         }
         textarea {

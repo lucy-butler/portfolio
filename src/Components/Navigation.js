@@ -1,14 +1,48 @@
 import React from 'react'
+import { useState } from "react";
+import { useEffect } from "react";
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import profile from '../img/profile.jpg';
-
+import Brightness6Icon from '@material-ui/icons/Brightness6'
+import Switch from '@material-ui/core/Switch'
 
 function Navigation() {
+  const [theme, setTheme] = useState('dark-theme');
+  const [checked, setChecked] = useState(true);
+  
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
+  const themeToggle = () => {
+    if(theme === 'light-theme'){
+      setTheme('dark-theme');
+      setChecked(true);
+    }else {
+      setTheme('light-theme');
+      setChecked(false);
+    }
+  }
+  
+
   return (
     <NavigationStyle>
       <div className="profile">
         <img src={profile} alt="ProfilePicture" />
+      </div>
+      <div className="light-dark-mode">
+        <div className="left-content">
+          <Brightness6Icon />
+        </div>
+        <div className="right-content">
+          <Switch 
+            value="switch"
+            checked={checked}
+            onClick={themeToggle}
+            color="default"
+          />
+        </div>
       </div>
       <ul className="nav-items">
         <li className="nav-item">
@@ -52,6 +86,23 @@ const NavigationStyle = styled.nav`
       border-radius: 50%;
       border: 8px solid var(--border-color);
     }
+  }
+
+  .light-dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #20c997;
+    border-radius: 20px;
+    width: 6rem;
+    height: 2rem;
+    .left-content {
+      svg {
+        display: flex;
+        color: var(--white-color);
+      }
+    }
+
   }
 
   .nav-items {
