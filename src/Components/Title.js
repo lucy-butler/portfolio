@@ -26,6 +26,15 @@ const TitleStyle = styled.div`
       color: var(--subtitle-color);
       z-index: -1;
       opacity: .5;
+      @media screen and (max-width:768px) {
+        top: 40%;
+        font-size: 4rem;
+      }
+      @media screen and (max-width:620px) {
+        top: 45%;
+        left: 1%;
+        font-size: 3.4rem;
+      }
     }
   }
 `;

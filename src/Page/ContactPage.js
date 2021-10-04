@@ -1,5 +1,5 @@
 import React from 'react';
-import {MainLayout} from '../styles/Layout';
+import {MainLayout, InnerLayout} from '../styles/Layout';
 import styled from 'styled-components';
 import Title from '../Components/Title';
 import ContactItem from '../Components/ContactItem';
@@ -18,50 +18,56 @@ function ContactPage() {
   return (
     <MainLayout>
       <Title title={'Contact'} span={'Contact'} />
-      <ContactPageStyle>
-        <div className="Contact-Infomation">
-          <h3>Contact Information</h3>
-          <div className="Infomation">
-            <ContactItem icon={location} title={'Address'} cont={'서울시 구로구 천왕동'}/>
-            <ContactItem icon={phone} title={'Cell Phone'} cont={'010-0000-0000'}/>
-            <ContactItem icon={email} title={'E-Mail'} cont={'lucybutler@naver.com'}/>
-            <ContactItem icon={web} title={'Web Site'} cont={'https://web.discode.co.kr'}/>
+      <InnerLayout>
+        <ContactPageStyle>
+          <div className="Contact-Infomation">
+            <h3>Contact <span>Information</span></h3>
+            <div className="Infomation">
+              <ContactItem icon={location} title={'Address'} cont={'서울시 구로구 천왕동'}/>
+              <ContactItem icon={phone} title={'Cell Phone'} cont={'010-0000-0000'}/>
+              <ContactItem icon={email} title={'E-Mail'} cont={'lucybutler@naver.com'}/>
+              <ContactItem icon={web} title={'Web Site'} cont={'https://web.discode.co.kr'}/>
 
+            </div>
+            <form action="#" >
+              <div className="ContactForm">
+                <div className="left-form">
+                  <label htmlFor="name">Your Name</label>
+                  <input type="text" id="name" placeholder="이름을 입력해주세요."/>
+                  <label htmlFor="email">Your E-mail</label>
+                  <input type="email" id="email" placeholder="이메일 주소를 입력해주세요." />
+                  <label htmlFor="subject">Subject</label>
+                  <input type="text" id="subject" placeholder="제목을 입력해주세요" />
+                </div>
+                <div className="right-form">
+                  <label htmlFor="message">Message</label>
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="내용을 입력해주세요." />
+                </div>
+              </div>
+              <div className="btn">
+                <PrimaryButton title={'Send Email'} />
+              </div>
+            </form>
           </div>
-          <form action="#" >
-            <div className="ContactForm">
-              <div className="left-form">
-                <label htmlFor="name">Your Name</label>
-                <input type="text" id="name" placeholder="이름을 입력해주세요."/>
-                <label htmlFor="email">Your E-mail</label>
-                <input type="email" id="email" placeholder="이메일 주소를 입력해주세요." />
-                <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" placeholder="제목을 입력해주세요" />
-              </div>
-              <div className="right-form">
-                <label htmlFor="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="내용을 입력해주세요." />
-              </div>
-            </div>
-            <div className="btn">
-              <PrimaryButton title={'Send Email'} />
-            </div>
-          </form>
-        </div>
-      </ContactPageStyle>
+        </ContactPageStyle>
+      </InnerLayout>
     </MainLayout>
   );
 }
 
 const ContactPageStyle = styled.section`
   .Contact-Infomation {
-    padding: 0 5rem;
+    
     h3 {
-        margin: 5rem 0 4rem 0;
+        margin-bottom: 5rem;
         font-size: 2rem;
         color: var(--white-color);
         text-align: center;
         letter-spacing: 1px;
+        span {
+          font-size: 2rem;
+          color: var(--icon-color);
+        }
       }
     .Infomation {
       display: grid;
@@ -73,6 +79,13 @@ const ContactPageStyle = styled.section`
       }
       svg {
         color: var(--icon-color);
+      }
+      @media screen and (max-width:1480px) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 3rem;
+        li {
+          margin-bottom: 1rem;
+        }
       }
     }
     .ContactForm {
@@ -124,6 +137,12 @@ const ContactPageStyle = styled.section`
             opacity: .2;
           }
         }
+      }
+      @media screen and (max-width:940px) {
+      grid-template-columns: repeat(1, 1fr);
+      .left-form {
+        padding-right: 0;
+      }
       }
     }
     .btn {

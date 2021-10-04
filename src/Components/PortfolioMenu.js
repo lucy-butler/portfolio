@@ -28,7 +28,7 @@ const MenuItemStyle = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 2rem;
-  
+
   .grid-item {
     margin-bottom: 1.4rem;
 
@@ -98,6 +98,12 @@ const MenuItemStyle = styled.div`
         color: var(--white-color);
       }
     }
+  }
+  @media screen and (max-width:920px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width:670px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 

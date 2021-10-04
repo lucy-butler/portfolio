@@ -14,7 +14,12 @@ const GlobalStyle = createGlobalStyle`
   --white-color: #151515;
   --under-color: #ffffff;
   --subtitle-color: #dadada;
-  --icon-color: #0d5741;
+  --icon-color: #007bff;
+  --web-color: #20c997;
+  --webspan-color: #007bff;
+  --moon-color: #ffa734;
+  --nav-color: #515151;
+  --side-color: #e6e6e6;
 }
 .dark-theme {
   --background-dark-color: #10121A;
@@ -27,6 +32,11 @@ const GlobalStyle = createGlobalStyle`
   --under-color: #ffffff;
   --subtitle-color: #92949a;
   --icon-color: #20c997;
+  --web-color: #007bff;
+  --webspan-color: #20c997;
+  --moon-color: #000000;
+  --nav-color: #a4acc4;
+  --side-color: #19192b;
 }
 * {
   margin: 0;
@@ -61,7 +71,26 @@ h1 {
   }
 }
 
-
+.side-button {
+  display: none;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  z-index: 1;
+  svg {
+    color: var(--web-color);
+    font-size: 3rem;
+  }
+}
+.nav-Toggle {
+  transform: translateX(0);
+  z-index: 2;
+}
+@media screen and (max-width:1200px) {
+  .side-button {
+    display: block;
+  }
+}
 `;
 
 export default GlobalStyle;

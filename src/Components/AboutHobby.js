@@ -3,12 +3,18 @@ import {InnerLayout} from '../styles/Layout';
 import styled from 'styled-components';
 import Title from '../Components/Title';
 import HobbyCard from '../Components/HobbyCard';
-import bicycle from '../img/bicycle.png';
-import board from '../img/board.png';
-import movie from '../img/movie.png';
+// import bicycle from '../img/bicycle.png';
+// import board from '../img/board.png';
+// import movie from '../img/movie.png';
+import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
+import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
+import MovieIcon from '@material-ui/icons/Movie';
 
 
 function AboutHobby() {
+  const bicycle = <DirectionsBikeIcon />
+  const board = <VideogameAssetIcon />
+  const movie = <MovieIcon />
   return (
     <InnerLayout>
       <AboutHobbyStyle>
@@ -40,8 +46,16 @@ const AboutHobbyStyle = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5rem;
-    margin-top: 5rem;    
+    margin-top: 5rem;
+    
+    @media screen and (max-width:960px) {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width:768px) {
+    grid-template-columns: repeat(1, 1fr);
+    }
   }
+  
 `;
 
 export default AboutHobby;

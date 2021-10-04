@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-import profile from '../img/profile.jpg';
+import profile from '../img/profile.png';
 import Brightness6Icon from '@material-ui/icons/Brightness6'
 import Switch from '@material-ui/core/Switch'
 
@@ -70,42 +70,43 @@ function Navigation() {
 
 const NavigationStyle = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
   border-right: 1px solid var(--border-color);
-
+  background-color: var(--side-color);
   .profile {
-    width: 70%;
+    width: 60%;
     padding: 1rem 0;
     border-bottom: 1px solid var(--border-color);
     img {
       width: 100%;
       border-radius: 50%;
-      border: 8px solid var(--border-color);
+      border: 4px solid var(--border-color);
     }
   }
 
   .light-dark-mode {
     display: flex;
+    margin: 3rem 0;
     align-items: center;
     justify-content: center;
-    background-color: #20c997;
+    background-color: #53708c;
     border-radius: 20px;
     width: 6rem;
     height: 2rem;
+    
     .left-content {
       svg {
         display: flex;
-        color: var(--white-color);
+        color: var(--moon-color);
       }
     }
-
   }
-
   .nav-items {
+    margin: auto 0;
     width: 100%;
     text-align: center;
     .active-class {
@@ -123,6 +124,7 @@ const NavigationStyle = styled.nav`
         font-weight: 600;
         font-size: 1.1rem;
         letter-spacing: 1px;
+        color: var(--nav-color);
       }
       &:hover {
         color: var(--white-color);
@@ -146,12 +148,16 @@ const NavigationStyle = styled.nav`
   }
 
   footer {
+    display: flex;
+    justify-content: center;
     width: 100%;
     text-align: center;
+    margin-top: auto;
     border-top: 1px solid var(--border-color);
     p {
       padding: 1rem 0;
       font-size: 1.1rem;
+      color: var(--nav-color);
     }
   }
 `;

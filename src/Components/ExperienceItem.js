@@ -59,11 +59,21 @@ const ExperienceItemStyle = styled.div`
       color: var(--icon-color);
       font-size: 1.6rem;
       padding-bottom: .6rem;
+      @media screen and (max-width:540px) {
+        font-size: 1.2rem;
+      }
     }
     .cont {
       color: var(--white-color);
     }
   }
+  @media screen and (max-width:540px) {
+    p {
+      font-size: 80%;
+    }
+  }
+  
+  
 `;
 
 export default ExperienceItem;

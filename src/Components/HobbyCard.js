@@ -5,7 +5,7 @@ function HobbyCard({image, title, cont}) {
   return (
     <HobbyCardStyle>
       <div className="container">
-        <img src={image} alt="자전거 이미지" />
+        <p>{image}</p>
         <dl>
           <dt>{title}</dt>
           <dd>{cont}</dd>
@@ -29,8 +29,9 @@ const HobbyCardStyle = styled.div`
   }
   .container {
     padding: 1.2rem;
-    img {
-      margin-left: 0.3rem;
+    svg {
+      font-size: 4rem;
+      color: var(--web-color);
     }
     dt {
       position: relative;
@@ -55,6 +56,7 @@ const HobbyCardStyle = styled.div`
         padding: .8rem 0;
         font-size: .9rem;
         letter-spacing: 1px;
+        color: var(--white-color);
       }
   }
 `;

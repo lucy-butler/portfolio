@@ -10,7 +10,7 @@ function TitleImage() {
       </div>
       <div className="right-content">
         <div className="sub-title">
-          <h3>I'm Web Publi</h3>
+          <h3>I'm a WEB <span>PUBLISHER</span></h3>
           <dl className="about-info">
             <dt>Name :</dt>
             <dd>채봉기</dd>
@@ -31,12 +31,11 @@ function TitleImage() {
 }
 
 const TitleAboutStyle = styled.div`
-
   display: flex;
   margin-top: 5rem;
-
+  
   .left-content {
-    width: 90%;
+    width: 100%;
     img {
       width: 90%;
       border-radius: 6px;
@@ -50,6 +49,11 @@ const TitleAboutStyle = styled.div`
     h3 {
       margin-bottom: 1.3rem;
       font-size: 2rem;
+      color: var(--white-color);
+      span {
+        font-size: 2rem;
+        color: var(--web-color);
+      }
     }
     .about-info {
       dt {
@@ -64,7 +68,9 @@ const TitleAboutStyle = styled.div`
         display: inline-block;
         width: calc(100% - 10rem);
         font-size: 1rem;
-        color: #20c997;
+        font-weight: 600;
+        color: var(--webspan-color);
+        letter-spacing: 1px;
       }
     }
     .introduce {
@@ -72,6 +78,16 @@ const TitleAboutStyle = styled.div`
       font-size: 1rem;
       letter-spacing: 1px;
       line-height: 1.7rem;
+      color: var(--white-color);
+    }
+  }
+  @media screen and (max-width:1024px) {
+    flex-direction: column;
+    .left-content {
+      img {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
     }
   }
 `;
