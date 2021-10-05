@@ -5,7 +5,7 @@ import React from 'react';
 function Particle() {
   return (
     <>
-      <Particles width="100%" height="100vh" 
+      <Particles width="100%" height="99vh" 
               params={{
                 particles: {
                   number:{
@@ -16,7 +16,7 @@ function Particle() {
                     }
                   },
                   color:{
-                    value: '#636e72'
+                    value: '#fff'
                   },
                   shape:{
                     type: 'circle',

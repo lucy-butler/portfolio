@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   --moon-color: #ffa734;
   --nav-color: #515151;
   --side-color: #e6e6e6;
+  --backhome-color:linear-gradient(#e5d4ff, #dbe7ff);
 }
 .dark-theme {
   --background-dark-color: #10121A;
@@ -37,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
   --moon-color: #000000;
   --nav-color: #a4acc4;
   --side-color: #19192b;
+  --backhome-color:linear-gradient(#2b1055, #7597de);
 }
 * {
   margin: 0;
