@@ -26,7 +26,7 @@ function ContactPage() {
               <ContactItem icon={location} title={'Address'} cont={'서울시 구로구 천왕동'}/>
               <ContactItem icon={phone} title={'Cell Phone'} cont={'010-0000-0000'}/>
               <ContactItem icon={email} title={'E-Mail'} cont={'lucybutler@naver.com'}/>
-              <ContactItem icon={web} title={'Web Site'} cont={'https://web.discode.co.kr'}/>
+              <ContactItem icon={web} title={'Web Site'} cont={'web.discode.co.kr'}/>
 
             </div>
             <form action="#" >
@@ -64,9 +64,16 @@ const ContactPageStyle = styled.section`
         color: var(--white-color);
         text-align: center;
         letter-spacing: 1px;
+        @media screen and (max-widtH:620px) {
+          font-size: 1.6rem;
+          margin-bottom: 3rem;
+        }
         span {
           font-size: 2rem;
           color: var(--icon-color);
+          @media screen and (max-widtH:620px) {
+          font-size: 1.6rem;
+          }
         }
       }
     .Infomation {

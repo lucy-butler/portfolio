@@ -39,7 +39,9 @@ const HobbyCardStyle = styled.div`
       font-size: 1.4rem;
       font-weight: 600;
       color: var(--white-color);
-
+      @media screen and (min-width:320px) and (max-width:480px) {
+      font-size: 1rem;
+      }
       &::after {
         content: '';
         position: absolute;
@@ -49,7 +51,6 @@ const HobbyCardStyle = styled.div`
         height: 4px;
         border-radius: 2px;
         background-color: var(--border-color);
-
       }
     }
     dd {
@@ -57,6 +58,9 @@ const HobbyCardStyle = styled.div`
         font-size: .9rem;
         letter-spacing: 1px;
         color: var(--white-color);
+        @media screen and (min-width:320px) and (max-width:480px) {
+        font-size: .8rem;
+        }
       }
   }
 `;

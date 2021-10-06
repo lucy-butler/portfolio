@@ -32,8 +32,7 @@ function TitleImage() {
 
 const TitleAboutStyle = styled.div`
   display: flex;
-  margin-top: 5rem;
-  
+
   .left-content {
     width: 100%;
     img {
@@ -53,6 +52,12 @@ const TitleAboutStyle = styled.div`
       span {
         font-size: 2rem;
         color: var(--web-color);
+        @media screen and (min-width:320px) and (max-width:480px) {
+        font-size: 1.4rem;
+        }
+      }
+      @media screen and (min-width:320px) and (max-width:480px) {
+        font-size: 1rem;
       }
     }
     .about-info {
@@ -63,6 +68,10 @@ const TitleAboutStyle = styled.div`
         font-weight: 600;
         color: var(--white-color);
         line-height: 2.2rem;
+        @media screen and (min-width:320px) and (max-width:480px) {
+        width: 5rem;
+        font-size: .8rem;
+        }
       }
       dd {
         display: inline-block;
@@ -71,7 +80,12 @@ const TitleAboutStyle = styled.div`
         font-weight: 600;
         color: var(--webspan-color);
         letter-spacing: 1px;
+        @media screen and (min-width:320px) and (max-width:480px) {
+        width: calc(100% - 5rem);
+        font-size: .8rem;
+        }
       }
+      
     }
     .introduce {
       margin-top: 1.5rem;
@@ -79,6 +93,9 @@ const TitleAboutStyle = styled.div`
       letter-spacing: 1px;
       line-height: 1.7rem;
       color: var(--white-color);
+      @media screen and (min-width:320px) and (max-width:480px) {
+        font-size: .8rem;
+        }
     }
   }
   @media screen and (max-width:1024px) {

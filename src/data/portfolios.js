@@ -17,7 +17,7 @@ const portfolios = [
     },
     {
         id: 2,
-        category: 'MOBILE',
+        category: '모바일',
         image: img3,
         alt: 'img3imagecont',
         link1: 'https://www.google.com',
@@ -37,7 +37,7 @@ const portfolios = [
     },
     {
         id: 4,
-        category: 'RESPONSIVE',
+        category: '반응형',
         image: img2,
         alt: 'img2imagecont',
         link1: 'https://www.google.com',
@@ -47,7 +47,7 @@ const portfolios = [
     },
     {
         id: 5,
-        category: 'RESPONSIVE',
+        category: '반응형',
         image: img2,
         alt: 'img2imagecont',
         link1: 'https://www.google.com',
@@ -67,7 +67,7 @@ const portfolios = [
     },
     {
         id: 7,
-        category: 'PC',
+        category: '모바일',
         image: css2,
         alt: 'css2imagecont',
         link1: 'https://www.google.com',

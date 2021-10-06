@@ -15,7 +15,7 @@ function ExperiencePage() {
       <InnerLayout>
         <ExperiencePageStyle>
           <div className="sub-title">
-            <h3><span>{Timelapse}</span>Education / Job Experience</h3>
+            <h3><span>{Timelapse}</span>Job Experience</h3>
           </div>
           <div className="exrerience-content">
             <ExperienceItem 
@@ -74,8 +74,12 @@ const ExperiencePageStyle = styled.section`
       font-size: 2rem;
       font-weight: 400;
       color: var(--white-color);
+      transition: all .4s;
       @media screen and (max-width:620px) {
         font-size: 1.6rem;
+      }
+      @media screen and (max-width:460px) {
+        font-size: 1.2rem;
       }
       span {
         display: inline-block;

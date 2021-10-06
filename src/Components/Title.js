@@ -17,6 +17,11 @@ const TitleStyle = styled.div`
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    @media screen and (max-width:500px) {
+        /* top: 45%;
+        left: 1%; */
+        font-size: 1.8rem;
+      }
     span {
       position: absolute;
       top: 30%;
@@ -34,6 +39,11 @@ const TitleStyle = styled.div`
         top: 45%;
         left: 1%;
         font-size: 3.4rem;
+      }
+      @media screen and (max-width:500px) {
+        /* top: 45%;
+        left: 1%; */
+        font-size: 2rem;
       }
     }
   }

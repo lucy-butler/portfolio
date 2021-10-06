@@ -47,7 +47,6 @@ const AboutHobbyStyle = styled.section`
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5rem;
     margin-top: 5rem;
-    
     @media screen and (max-width:960px) {
     grid-template-columns: repeat(2, 1fr);
     }

@@ -33,7 +33,7 @@ const ExperienceItemStyle = styled.div`
       height: 16px;
       border-radius: 50%;
       border: 2px solid var(--icon-color);
-      background-color: var(--background-dark-color);
+      background-color: var(--background-dark-color)
     }
     .year {
       color: var(--white-color);
@@ -46,6 +46,9 @@ const ExperienceItemStyle = styled.div`
     position: relative;
     padding-left: 5rem;
     width: 70%;
+    @media screen and (min-width:320px) and (max-width:480px) {
+      padding-left: 1rem;
+      }
     &::before {
       content: '';
       position: absolute;
@@ -54,6 +57,9 @@ const ExperienceItemStyle = styled.div`
       width: 3rem;
       height: 2px;
       background-color: var(--border-color);
+      @media screen and (min-width:320px) and (max-width:480px) {
+        width: 10px;
+      }
     }
     .title {
       color: var(--icon-color);
@@ -62,9 +68,15 @@ const ExperienceItemStyle = styled.div`
       @media screen and (max-width:540px) {
         font-size: 1.2rem;
       }
+      @media screen and (min-width:320px) and (max-width:480px) {
+        font-size: .9rem;
+      }
     }
     .cont {
       color: var(--white-color);
+      @media screen and (min-width:320px) and (max-width:480px) {
+        font-size: 60%;
+      }
     }
   }
   @media screen and (max-width:540px) {

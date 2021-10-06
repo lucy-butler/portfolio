@@ -29,10 +29,17 @@ const ButtonStyled = styled.button`
   &:active, &:focus {
     font-size: 2rem;
     color: #20c997;
+    @media screen and (min-width:320px) and (max-width:480px) {
+      font-size: 1.6rem;
+    }
   }
   &:not(:first-child) {
-    margin-left: 2.5rem;
+    margin-left: 1.5rem;
+    @media screen and (min-width:320px) and (max-width:480px) {
+      margin-left: 1rem;
+    }
   }
+  
 `;
 
 const ButtonsStyled = styled.div`

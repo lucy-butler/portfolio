@@ -9,9 +9,12 @@ export const MainLayout = styled.div`
     padding: 5rem 2rem;
   }
   @media screen and (max-width:570px) {
-    padding: 2rem .8rem;
+    padding: 4rem .8rem;
   }
 `;
 export const InnerLayout = styled.div`
   padding: 5rem 0;
+  @media screen and (max-width:570px) {
+    padding: 3rem 0;
+  }
 `;
