@@ -5,6 +5,7 @@ import Moon from '../img/moon.png';
 import Mountin from '../img/mountin.png'
 import Lcloud from '../img/left-cloud.png'
 import Rcloud from '../img/right-cloud.png'
+import HomeTitle from '../Components/HomeTitle';
 
 
 function HomePage() {
@@ -19,14 +20,7 @@ function HomePage() {
         <img src={Lcloud} alt="구름이미지" className="lcloud" />
         <img src={Rcloud} alt="구름이미지" className="rcloud" />
       </div>
-      <div className="typography">
-        <h1>Hi I'm <span>Lorem Ipsum</span></h1>
-        <p>
-        Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem.
-        Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-        Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.
-        </p>
-      </div>  
+      <HomeTitle />  
     </HomePageStyle>
   );
 }
@@ -92,14 +86,6 @@ const HomePageStyle = styled.header`
       bottom: 0;
       opacity: .6;
     }
-  }
-  .typography {
-    position: absolute;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
   }
 `;
 export default HomePage;
