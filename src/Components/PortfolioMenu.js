@@ -9,7 +9,7 @@ function PortfolioMenu({menuItem}) {
         menuItem.map((item) => {
           return <div className="grid-item" key={item.id}>
             <div className="portfolio-image">
-              <a href={item.link1}><LinkIcon /></a>
+              <a href={item.link1} target={item.link2}><LinkIcon /></a>
               <img src={item.image} alt={item.alt} />
             </div>
             <div className="portfolio-cotent">

@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 import {MainLayout, InnerLayout} from '../styles/Layout';
 import styled from 'styled-components';
 import Title from '../Components/Title';
@@ -15,6 +16,17 @@ function ContactPage() {
   const email = <MailOutlineIcon />
   const web = <LanguageIcon />
 
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs.sendForm(
+      'lucybutler', 
+      'lucybutler_Template', 
+      e.target, 
+      'user_oLbdw4M8kYupv7HDuA03I'
+      ).then(res=>{
+        console.log(res);
+      }).catch(err=> console.log(err));
+  }
   return (
     <MainLayout>
       <Title title={'Contact'} span={'Contact'} />
@@ -29,7 +41,7 @@ function ContactPage() {
               <ContactItem icon={web} title={'Web Site'} cont={'web.discode.co.kr'}/>
 
             </div>
-            <form action="#" >
+            <form onSubmit={sendEmail} >
               <div className="ContactForm">
                 <div className="left-form">
                   <label htmlFor="name">Your Name</label>
@@ -46,6 +58,7 @@ function ContactPage() {
               </div>
               <div className="btn">
                 <PrimaryButton title={'Send Email'} />
+                <input type="submit" value="Send" />
               </div>
             </form>
           </div>

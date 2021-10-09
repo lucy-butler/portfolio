@@ -10,8 +10,8 @@ const portfolios = [
         category: 'PC',
         image: css1,
         alt: 'css1imagecont',
-        link1: `https://www.google.com`,
-        link2: 'target="_blank"',
+        link1: 'https://www.google.com',
+        link2: '_blank',
         title: 'Responsive Resume',
         text: 'Created with only HTML and CSS.'
     },
