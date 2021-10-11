@@ -1,5 +1,5 @@
-import React from 'react';
-import emailjs from 'emailjs-com';
+import React, { useRef } from 'react';
+import emailjs  from 'emailjs-com';
 import {MainLayout, InnerLayout} from '../styles/Layout';
 import styled from 'styled-components';
 import Title from '../Components/Title';
@@ -9,6 +9,7 @@ import CallIcon from '@material-ui/icons/Call';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LanguageIcon from '@material-ui/icons/Language';
 import PrimaryButton from '../Components/PrimaryButton';
+import {useForm} from 'react-hook-form';
 
 function ContactPage() {
   const location = <LocationOnIcon />
@@ -16,18 +17,25 @@ function ContactPage() {
   const email = <MailOutlineIcon />
   const web = <LanguageIcon />
 
-  function sendEmail(e) {
-    e.preventDefault();
-    emailjs.sendForm(
-      'lucybutler', 
-      'lucybutler_Template', 
-      e.target, 
-      'user_oLbdw4M8kYupv7HDuA03I'
-      ).then(res=>{
-        console.log(res);
-      }).catch(err=> console.log(err));
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const form = useRef();
+  const sendEmail = () => {
+    
+        
+    emailjs.sendForm('lucybutler', 'lucybutler_Template', form.current, 'user_oLbdw4M8kYupv7HDuA03I')
+      .then((result) => {
+          console.log(result.text);
+          reset();
+      }, (error) => {
+          console.log(error.text);
+      }); 
+      
+      
   }
+
+
   return (
+    
     <MainLayout>
       <Title title={'Contact'} span={'Contact'} />
       <InnerLayout>
@@ -41,24 +49,27 @@ function ContactPage() {
               <ContactItem icon={web} title={'Web Site'} cont={'web.discode.co.kr'}/>
 
             </div>
-            <form onSubmit={sendEmail} >
+            <form ref={form} onSubmit={handleSubmit(sendEmail)}>
               <div className="ContactForm">
                 <div className="left-form">
                   <label htmlFor="name">Your Name</label>
-                  <input type="text" id="name" placeholder="이름을 입력해주세요."/>
-                  <label htmlFor="email">Your E-mail</label>
-                  <input type="email" id="email" placeholder="이메일 주소를 입력해주세요." />
-                  <label htmlFor="subject">Subject</label>
-                  <input type="text" id="subject" placeholder="제목을 입력해주세요" />
+                  <input type="text" id="name" name="name" placeholder="이름을 입력해주세요." {...register("name",{ required: true })} />
+                  <div className="errtext">{errors.name?.type === 'required' && "이름을 입력해주세요"}</div>
+                  <label htmlFor="email" >Your E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="이메일 주소를 입력해주세요." {...register("email",{ required: true })} />
+                  <div className="errtext">{errors.email?.type === 'required' && "이메일 주소를 입력해주세요"}</div>
+                  <label htmlFor="subject" >Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="제목을 입력해주세요" {...register("subject",{ required: true })} />
+                  <div className="errtext">{errors.subject?.type === 'required' && "제목을 입력해주세요"}</div>
                 </div>
                 <div className="right-form">
                   <label htmlFor="message">Message</label>
-                  <textarea name="message" id="message" cols="30" rows="10" placeholder="내용을 입력해주세요." />
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="내용을 입력해주세요." {...register("message",{ required: true })} />
+                  <div className="errtext">{errors.message?.type === 'required' && "내용을 입력해주세요"}</div>
                 </div>
               </div>
               <div className="btn">
-                <PrimaryButton title={'Send Email'} />
-                <input type="submit" value="Send" />
+                <PrimaryButton title={'Send Email'} type="submit" />
               </div>
             </form>
           </div>
@@ -111,6 +122,7 @@ const ContactPageStyle = styled.section`
     .ContactForm {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      
       .left-form {
         padding-right: 2rem;
         label {
@@ -130,9 +142,12 @@ const ContactPageStyle = styled.section`
           margin-bottom: 1rem;
           outline: none;
           border: 1px solid var(--border-color);
-          color: inherit;
+          color: var(--white-color);
           &::placeholder {
             opacity: .2;
+          }
+          &:focus {
+            outline: 1px solid var(--white-color);
           }
         }
       }
@@ -152,23 +167,33 @@ const ContactPageStyle = styled.section`
           background: transparent;
           outline: none;
           border: 1px solid var(--border-color);
-          color: inherit;
+          color: var(--white-color);
           &::placeholder {
             opacity: .2;
+          }
+          &:focus {
+            outline: 1px solid var(--white-color);
           }
         }
       }
       @media screen and (max-width:940px) {
-      grid-template-columns: repeat(1, 1fr);
-      .left-form {
-        padding-right: 0;
+        grid-template-columns: repeat(1, 1fr);
+        .left-form {
+          padding-right: 0;
+        }
       }
+      .errtext {
+        font-size: .8rem;
+        text-align: center;
+        color: #ff4141;
       }
+      
     }
     .btn {
       margin-top: 2rem;
       text-align: center;
     }
+    
   }
 `;
 
