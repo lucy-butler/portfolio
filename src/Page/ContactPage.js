@@ -24,7 +24,8 @@ function ContactPage() {
         
     emailjs.sendForm('lucybutler', 'lucybutler_Template', form.current, 'user_oLbdw4M8kYupv7HDuA03I')
       .then((result) => {
-          console.log(result.text);
+          // console.log(result.text);
+          alert('발송완료');
           reset();
       }, (error) => {
           console.log(error.text);
