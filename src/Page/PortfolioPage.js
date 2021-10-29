@@ -1,3 +1,4 @@
+// import react, {Component, useState} from 'react';
 import React, {useState} from 'react';
 import Title from '../Components/Title';
 import {MainLayout, InnerLayout} from '../styles/Layout';

@@ -6,10 +6,10 @@ function HomeTitle() {
   return (
     <HomeTitleStyle>
       <div className="typography">
-        <h1>Hello. I'm a
+        <h1>Hello. I'm a web
           <span className="typo">
             <Typewriter
-              words={['HTML', 'CSS', 'JavaScript', 'WEB PUBLISHER!']}
+              words={['jQuery', 'HTML', 'CSS', 'JavaScript', 'PUBLISHER!']}
               loop
               cursor
               cursorStyle='|'
@@ -20,7 +20,7 @@ function HomeTitle() {
           </span>
         </h1>
         <p>
-          lucybutler portfolio에 오신것을 환영합니다
+          안녕하세요 React 기반으로 만들어본 사이트 입니다.
         </p>
       </div>
     </HomeTitleStyle>

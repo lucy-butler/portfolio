@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {MainLayout, InnerLayout} from '../styles/Layout';
 import Title from '../Components/Title';
 import TitleAbout from '../Components/TitleAbout';

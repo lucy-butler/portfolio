@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
 import Moon from '../img/moon.png';

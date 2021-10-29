@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+// import react, { Component, useRef } from 'react';
+import React, {useRef} from 'react';
 import emailjs  from 'emailjs-com';
 import {MainLayout, InnerLayout} from '../styles/Layout';
 import styled from 'styled-components';

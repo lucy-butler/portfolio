@@ -1,79 +1,70 @@
-import css1 from '../img/portImages/cv_css.png';
-import css2 from '../img/portImages/ms.png';
-import react1 from '../img/portImages/react_styled.png';
-import img2 from '../img/portImages/maya-4.jpg';
-import img3 from '../img/portImages/maya-3.jpg';
+import web_project03 from '../img/portImages/web_project03.jpg';
+import web_project01 from '../img/portImages/web_project01.jpg';
+import web_project02 from '../img/portImages/web_project02.jpg';
+import web_project04 from '../img/portImages/web_project04.jpg';
+import web_project05 from '../img/portImages/web_project05.jpg';
+import web_project06 from '../img/portImages/web_project06.jpg';
 
 const portfolios = [
     {
         id: 1,
         category: 'PC',
-        image: css1,
-        alt: 'css1imagecont',
-        link1: 'https://www.google.com',
+        image: web_project06,
+        alt: '암보험몰 홈페이지',
+        link1: 'https://portfolio.discode.co.kr/site/web_project06/',
         link2: '_blank',
-        title: 'Responsive Resume',
-        text: 'Created with only HTML and CSS.'
+        title: 'am-insurance HomePage',
+        text: 'grid/float/flex ie에 맞춘 암보험몰 사이트'
     },
     {
         id: 2,
-        category: '모바일',
-        image: img3,
-        alt: 'img3imagecont',
-        link1: 'https://www.google.com',
-        link2: 'https://www.google.com',
-        title: 'How To Animate In Maya',
-        text: 'Number one Animation ApplicationNumber'
+        category: 'PC',
+        image: web_project03,
+        alt: '캐스퍼 홈페이지',
+        link1: 'https://portfolio.discode.co.kr/site/web_project03/',
+        link2: '_blank',
+        title: 'Event HomePage',
+        text: '간단한 이미지 화면전환을 이용한 이벤트 사이트'
     },
     {
         id: 3,
         category: 'PC',
-        image: img3,
-        alt: 'img3imagecont',
-        link1: 'https://www.google.com',
-        link2: 'https://www.google.com',
-        title: 'How To Animate In Maya',
-        text: 'Number one Animation Application'
+        image: web_project01,
+        alt: '카페 홈페이지',
+        link1: 'https://portfolio.discode.co.kr/site/web_project01',
+        link2: '_blank',
+        title: 'Cafe HomePage',
+        text: 'ie적용 가능한 스와이퍼 모션추가한 홈페이지'
     },
     {
         id: 4,
         category: '반응형',
-        image: img2,
-        alt: 'img2imagecont',
-        link1: 'https://www.google.com',
-        link2: 'https://www.google.com',
-        title: 'How To Use Blender',
-        text: 'Free Animation Software'
+        image: web_project02,
+        alt: '쇼핑몰 형 홈페이지',
+        link1: 'https://portfolio.discode.co.kr/site/web_project02',
+        link2: '_blank',
+        title: 'sports 쇼핑몰 홈페이지',
+        text: 'ie 적용 가능한 grid 이용한 반응형 사이트'
     },
     {
         id: 5,
         category: '반응형',
-        image: img2,
-        alt: 'img2imagecont',
-        link1: 'https://www.google.com',
-        link2: 'https://www.google.com',
-        title: 'How To Use Blender',
-        text: 'Free Animation Software'
+        image: web_project05,
+        alt: '기업형 홈페이지',
+        link1: 'https://portfolio.discode.co.kr/site/web_project05',
+        link2: '_blank',
+        title: '기업형 홈페이지',
+        text: '영상을 배경으로 이용한 반응형 사이트'
     },
     {
         id: 6,
-        category: 'PC',
-        image: react1,
-        alt: 'react1imagecont',
-        link1: 'https://www.google.com',
-        link2: 'https://www.google.com',
-        title: 'Responsive Portfolio Website',
-        text: 'Created using different technologies'
-    },
-    {
-        id: 7,
-        category: '모바일',
-        image: css2,
-        alt: 'css2imagecont',
-        link1: 'https://www.google.com',
-        link2: 'https://www.google.com',
-        title: 'Microsoft Website Clone',
-        text: 'Created using HTML and CSS'
+        category: 'REACT',
+        image: web_project04,
+        alt: '호텔 소개 홈페이지',
+        link1: 'https://portfolio.discode.co.kr/site/web_project04/',
+        link2: '_blank',
+        title: 'Hotel Reservation',
+        text: 'React 적용한 슬라이드 페이지'
     }
 ]
 
